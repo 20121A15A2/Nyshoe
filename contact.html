@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - NyShoe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Toast Notification -->
+<div id="toast"></div>
+
+<!-- Header -->
+<header>
+  <nav>
+    <div class="logo">Ny<span>Shoe</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="cart.html">
+        Cart
+        <span id="cartBadge" style="display:none;">0</span>
+      </a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<!-- Page Header -->
+<div class="page-header">
+  <h1>Contact Us</h1>
+  <p>We'd love to hear from you - questions, feedback, or just to say hello!</p>
+</div>
+
+<!-- Contact Section -->
+<div class="container">
+  <div class="contact-grid">
+
+    <!-- Left: Contact Information -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      
+      <div class="info-block">
+        <div class="info-icon">📍</div>
+        <div>
+          <h4>Our Location</h4>
+          <p>456 Footwear Boulevard<br>New York, NY 10001<br>United States</p>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-icon">📧</div>
+        <div>
+          <h4>Email Us</h4>
+          <p>info@nyshoe.com<br>support@nyshoe.com<br>sales@nyshoe.com</p>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-icon">📞</div>
+        <div>
+          <h4>Call Us</h4>
+          <p>+1 (555) 123-4567<br>+1 (555) 765-4321<br>Mon-Fri: 9AM - 6PM EST</p>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-icon">🕐</div>
+        <div>
+          <h4>Business Hours</h4>
+          <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-icon">💬</div>
+        <div>
+          <h4>Social Media</h4>
+          <p>Follow us on Instagram, Facebook,<br>and Twitter @NyShoeOfficial</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <div class="contact-form-box">
+      <h2>Send Us a Message</h2>
+      
+      <!-- The Form -->
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contactName">Full Name *</label>
+            <input type="text" id="contactName" placeholder="John Doe">
+            <span class="error-msg">Please enter your name (min. 2 characters)</span>
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail">Email Address *</label>
+            <input type="email" id="contactEmail" placeholder="john@example.com">
+            <span class="error-msg">Please enter a valid email address</span>
+          </div>
+        </div>
+
+        <div class="form-group full">
+          <label for="contactSubject">Subject *</label>
+          <select id="contactSubject">
+            <option value="" disabled selected>Choose a topic...</option>
+            <option value="order">Order Inquiry</option>
+            <option value="product">Product Information</option>
+            <option value="shipping">Shipping & Delivery</option>
+            <option value="returns">Returns & Exchanges</option>
+            <option value="sizing">Size & Fit Help</option>
+            <option value="wholesale">Wholesale Inquiry</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+          </select>
+          <span class="error-msg">Please select a subject</span>
+        </div>
+
+        <div class="form-group full">
+          <label for="contactMessage">Your Message *</label>
+          <textarea id="contactMessage" placeholder="Tell us how we can help you..."></textarea>
+          <span class="error-msg">Please enter your message (min. 10 characters)</span>
+        </div>
+
+        <button type="submit" class="btn btn-full">Send Message</button>
+      </form>
+
+      <!-- Success Message (hidden by default) -->
+      <div class="success-message" id="successMessage">
+        <div class="icon">✅</div>
+        <h3>Message Sent Successfully!</h3>
+        <p>Thank you for contacting NyShoe!<br>Our team will review your message and get back to you within 24 hours.</p>
+        <button class="btn btn-blue" onclick="resetContactForm()">Send Another Message</button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p><strong>NyShoe</strong> - Your Premium Footwear Destination</p>
+  <p>
+    <a href="index.html">Home</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html">Contact</a>
+  </p>
+  <p style="margin-top:16px; opacity:0.8; font-size:14px;">&copy; 2025 NyShoe. All rights reserved.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
